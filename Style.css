@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+#home {
+    position: relative;
+}
+
+#home img {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+#home__content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    font-weight: 900;
+    color: pink;
+
+}
