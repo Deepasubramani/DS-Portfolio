@@ -42,3 +42,13 @@ body {
     margin:auto;
     justify-content: center;
 }
+
+#aboutMe{
+    background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(Images/common-bg.svg);
+    background-position: center;
+    position: relative;
+}
+.skill-item span{
+    background-color: rgba(153,153,153,.2);
+    color: #666;
+}
