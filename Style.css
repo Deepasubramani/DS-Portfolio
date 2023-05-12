@@ -10,21 +10,6 @@ body {
 #home{
     position: relative;
 }
-#home__content {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    left: 50%;
-    top: 50%;
-    font-size: 30px;
-    font-weight: 900;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 30rem;
-    color: purple;
-    animation: type 4s steps(60, end);
-
-}
 
 
 @keyframes type {
@@ -52,3 +37,19 @@ body {
     background-color: rgba(153,153,153,.2);
     color: #666;
 }
+#home__content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    font-weight: 900;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30rem;
+    color: purple;
+    animation: type 4s steps(60, end);
+
+}
+
