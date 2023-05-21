@@ -2,41 +2,54 @@
     margin: 0;
     padding: 0;
 }
-
+ul,li{
+    list-style: none;
+    display: inline-block;
+    margin:5px;
+}
 body {
-    min-width: 375px;
+    min-width: 300px;
     font-family: "Roboto", sans-serif;
 }
-#home{
+
+#home {
     position: relative;
 }
 
+.heading {
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    color: #111;
+    padding-bottom: 30px;
+}
+
+.heading-underline::after {
+    content: "";
+    background-color: #fdb114;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 35px;
+    border-radius: 20px;
+    margin-top: 5px
+}
 
 @keyframes type {
     from {
         width: 0;
     }
 }
-
+.free-text{
+    text-align: center;
+}
 .nav-custom {
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, .15);
 }
-#profile__image{
-    display:flex;
-    margin:auto;
-    justify-content: center;
-}
 
-#aboutMe{
-    background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(Images/common-bg.svg);
-    background-position: center;
-    position: relative;
-}
-.skill-item span{
-    background-color: rgba(153,153,153,.2);
-    color: #666;
-}
 #home__content {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -47,8 +60,163 @@ body {
     font-weight: 900;
     white-space: nowrap;
     overflow: hidden;
-    width: 30rem;
-    color: purple;
+    width: 100%;
+    color: #fdb114;
     animation: type 4s steps(60, end);
 
+}
+
+#aboutMe ,#contact {
+    background: linear-gradient(to right, rgba(245, 245, 245, .8), rgba(245, 245, 245, .8)), url(/Images/common-bg.svg);
+    background-position: center;
+    position: relative;
+    max-width: 100%;
+    padding:20px;
+}
+
+#aboutMe-profile__image {
+    width: 152px;
+    height: 152px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+
+.skill-item span {
+    background-color: rgba(153, 153, 153, .2);
+    color: #666;
+}
+
+#myworks {
+    background-color: #fafafa;
+}
+
+.project__name {
+    display: flex;
+}
+
+.project__lists {
+    max-width: 100%;
+    min-width: 200px;
+}
+
+.project__card {
+    padding: 16px;
+    box-shadow: 0px 0px 5px 1px lightgray;
+}
+
+.project__image {
+    max-width: 100%;
+}
+
+.project-slidup-content {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fdb114;
+    padding: 35px;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.project-slidup-content .skill-item span {
+    background-color: #fdb114;
+    color: #f2f2f2;
+}
+
+#project-booki:hover .project-slidup-content,
+#project-ohmyfood:hover .project-slidup-content {
+    opacity: 1;
+}
+
+.project-item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    box-shadow: 1px 1px 5px 2px #fdb114;
+    border-radius: 20px;
+    border: 2px solid #fdb114;
+}
+
+.arrow {
+    display: table;
+    padding: 10px;
+    animation: rotate .6s;
+
+}
+
+.arrow-head {
+
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid black;
+
+}
+
+.arrow-body {
+    height: 10px;
+    width: 2px;
+    background-color: black;
+    margin-left: 3px
+}
+#btn-submit{
+    background-color: #fdb114;
+    color: white;
+}
+#footer{
+    background-color: rgb(52 52 52);
+    backdrop-filter: blur(5px);
+    color: white;
+}
+#footer-sec-upper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:20px;
+}
+#footer-sect-lower{
+   border-top:2px solid yellow;
+   padding-top:20px;
+}
+
+@media only screen and (max-width: 700px) {
+    #footer-row-1 {
+      min-width: 100%;
+    }
+    #aboutMe-profile__description h3{
+     text-align: center;
+    }
+  }
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 10px, 0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(45deg)
+    }
+
+    to {
+        transform: rotate(45deg)
+    }
 }
