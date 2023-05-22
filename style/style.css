@@ -2,11 +2,19 @@
     margin: 0;
     padding: 0;
 }
-ul,li{
+
+ul,
+li {
     list-style: none;
     display: inline-block;
-    margin:5px;
+    margin: 5px;
 }
+
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
 body {
     min-width: 300px;
     font-family: "Roboto", sans-serif;
@@ -42,9 +50,11 @@ body {
         width: 0;
     }
 }
-.free-text{
+
+.free-text {
     text-align: center;
 }
+
 .nav-custom {
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, .15);
@@ -66,12 +76,13 @@ body {
 
 }
 
-#aboutMe ,#contact {
+#aboutMe,
+#contact {
     background: linear-gradient(to right, rgba(245, 245, 245, .8), rgba(245, 245, 245, .8)), url(/Images/common-bg.svg);
     background-position: center;
     position: relative;
     max-width: 100%;
-    padding:20px;
+    padding: 20px;
 }
 
 #aboutMe-profile__image {
@@ -86,6 +97,14 @@ body {
 .skill-item span {
     background-color: rgba(153, 153, 153, .2);
     color: #666;
+}
+
+#linkedin-redirect-sec {
+    display: flex;
+}
+
+#linkedin-redirect-sec h6 {
+    padding: 5px;
 }
 
 #myworks {
@@ -151,63 +170,72 @@ body {
 }
 
 .arrow {
-    display: table;
+    display: inline-flex;
     padding: 10px;
-    animation: rotate .6s;
+    animation: bounce 0.8s infinite;
 
 }
 
 .arrow-head {
-
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 4px solid black;
-
+    width: 13px;
+    height: 3px;
+    background-color: #fdb114;
+    margin-top: 4px;
 }
 
 .arrow-body {
-    height: 10px;
-    width: 2px;
-    background-color: black;
-    margin-left: 3px
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #fdb114;
 }
-#btn-submit{
+
+#btn-submit {
     background-color: #fdb114;
     color: white;
 }
-#footer{
+
+#footer {
     background-color: rgb(52 52 52);
     backdrop-filter: blur(5px);
     color: white;
 }
-#footer-sec-upper{
+
+#footer-sec-upper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding:20px;
+    padding: 20px;
 }
-#footer-sect-lower{
-   border-top:2px solid yellow;
-   padding-top:20px;
+
+#footer-sect-lower {
+    border-top: 2px solid yellow;
+    padding-top: 20px;
 }
+
+#footer-row-2 img {
+    height: 25px;
+}
+
 
 @media only screen and (max-width: 700px) {
     #footer-row-1 {
-      min-width: 100%;
+        min-width: 100%;
     }
-    #aboutMe-profile__description h3{
-     text-align: center;
+
+    #aboutMe-profile__description h3 {
+        text-align: center;
     }
-  }
+}
+
 @keyframes bounce {
     from {
         transform: translate3d(0, 0, 0);
     }
 
     to {
-        transform: translate3d(0, 10px, 0);
+        transform: translate3d(10px, 0, 0);
     }
 }
 
