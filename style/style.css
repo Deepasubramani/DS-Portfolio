@@ -90,7 +90,7 @@ body {
 
 #aboutMe-profile__image {
     width: 152px;
-    height: 152px;
+    height: 300px;
     display: flex;
     margin: auto;
     justify-content: center;
