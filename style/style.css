@@ -9,6 +9,9 @@ li {
     display: inline-block;
     margin: 5px;
 }
+p{
+    text-align: justify;
+}
 
 a {
     text-decoration: none !important;
